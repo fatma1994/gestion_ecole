@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/eleve', function () {
+    return 'bonjour fatima';
+});
+
+//Route::get('/eleve/{nom}', function ($nom) {
+    //return 'je m appelle $nom';
+//});
+Route::get('/eleve','EleveController@index');
+Route::get("/eleve/{id}","EleveController@show");
+Route::get('/fa','HomeController@index');
+Route::get('/home','HomeController@show');
